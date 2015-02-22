@@ -1,0 +1,17 @@
+import time
+import picamera
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM) 
+GPIO.setup(17, GPIO.IN, GPIO.PUD_UP) #Gauche
+GPIO.setup(22, GPIO.IN,GPIO.PUD_UP)  #Droite
+GPIO.setup(GPIO.IN(
+
+GPIO.setup(18,OUT) #Led Rouge
+
+
+with picamera.PiCamera() as camera:
+    camera.start_preview()
+    GPIO.wait_for_edge(17, GPIO.FALLING)
+    camera.capture('/home/pi/Detecteur/image.jpg')
+    camera.stop_preview()
