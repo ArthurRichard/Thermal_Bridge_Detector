@@ -5,7 +5,7 @@ __author__ = 'arthrik'
 
 from Tkinter import *
 
-TEMP_AMBIANTE = 25
+TEMP_AMBIANTE = 25  #A remplacer par le registre I2C
 
 fen = Tk()
 #fen.attributes('-fullscreen', 1)
